@@ -1,0 +1,14 @@
+#list li{
+    /* border: 1px red solid; */
+    max-width: 100px;
+}
+
+#checkedOff{
+    color: red;
+    text-decoration: line-through;
+}
+
+#clear{
+    color: initial;
+    text-decoration: initial;
+}

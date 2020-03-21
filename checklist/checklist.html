@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist</title>
+    <link rel="stylesheet" href="checklist.css">
+</head>
+
+<body>
+    <div id="newItem">
+        <input type="text" placeholder="Name">
+        <button onclick="addNew()">ADD</button>
+    </div>
+
+    <ol id="list"></ol>
+
+    <script>
+        var list = document.querySelector("#list")
+        items = []
+
+        if (!JSON.parse(localStorage.items)) {
+            this.localStorage.setItem("items", JSON.stringify(items))
+        }
+
+        function checkOff() {
+            event.target.id = "checkedOff"
+            event.target.onclick = function () { clear() }
+        }
+
+        function clear() {
+            event.target.id = "clear"
+            event.target.onclick = function () { checkOff() }
+        }
+
+        function addNew() {
+            var name = document.querySelector("#newItem input")
+            var item = document.createElement("li")
+            item.appendChild(document.createTextNode(name.value))
+            list.appendChild(item)
+            item.onclick = function () { checkOff() }
+            items.push(name.value)
+            this.localStorage.setItem("items", JSON.stringify(items))
+            item.id = "clear"
+        }
+
+        function add(name) {
+            var item = document.createElement("li")
+            item.appendChild(document.createTextNode(name))
+            list.appendChild(item)
+            item.onclick = function () { checkOff() }
+            items.push(name)
+            this.localStorage.setItem("items", JSON.stringify(items))
+        }
+
+        JSON.parse(localStorage.items).forEach(el => {
+            add(el)
+        });
+    </script>
+</body>
+
+</html>
