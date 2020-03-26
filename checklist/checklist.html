@@ -9,15 +9,16 @@
 </head>
 
 <body>
-    <div id="newItem">
+    <form id="newItem">
         <input type="text" placeholder="Name">
-        <button onclick="addNew()">ADD</button>
-    </div>
+        <input required type="submit" value="ADD" name="add" onclick="addNew()">
+    </form>
 
     <ol id="list"></ol>
 
     <script>
         var list = document.querySelector("#list")
+        var listItems = document.querySelectorAll("#list li")
         items = []
 
         if (!JSON.parse(localStorage.items)) {
@@ -26,11 +27,19 @@
 
         function checkOff() {
             event.target.id = "checkedOff"
-            event.target.onclick = function () { clear() }
+            event.target.onclick = function () { todo() }
+            var index = 0
+            items.forEach(li => {
+                if (li == event.target.innerText) {
+                    items.splice(index, 1)
+                    this.localStorage.setItem("items", JSON.stringify(items))
+                }
+                index++
+            });
         }
 
-        function clear() {
-            event.target.id = "clear"
+        function todo() {
+            event.target.id = "todo"
             event.target.onclick = function () { checkOff() }
         }
 
@@ -42,7 +51,7 @@
             item.onclick = function () { checkOff() }
             items.push(name.value)
             this.localStorage.setItem("items", JSON.stringify(items))
-            item.id = "clear"
+            item.id = "todo"
         }
 
         function add(name) {
