@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="survey.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <main class="container">
+        <header" class="item1">
+            <h1 id="title">Survey Form</h1>
+            </header>
+
+            <p id="description" class="item2">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Vero in fugit aspernatur aperiam dolores neque odit quaerat
+                atque veritatis corrupti dolorum, amet repudiandae quasi dolore?
+            </p>
+
+            <form id="survey-form" class="form-container" action="">
+                <label for="name" id="name-label" class="item20 item">Name</label>
+                <input id="name" class="item4 item" name="name" type="text" placeholder="Enter your name" required>
+
+                <label for="email" id="email-label" class="item5 item">Email</label>
+                <input type="email" class="item6 item" name="email" id="email" placeholder="Enter your email" required>
+
+                <label for="age" id="number-label" class="item7 item">Age (Optional)</label>
+                <input type="number" class="item8 item" name="age" id="number" placeholder="Enter your age" min="16"
+                    max="100">
+
+                <label for="state" id="dropdown-label" class="item9 item">State (Optional)</label>
+                <select name="state" id="dropdown" class="item10 item">
+                    <option value="Illinois">Illinois</option>
+                    <option value="California">California</option>
+                    <option value="Nevada">Nevada</option>
+                </select>
+
+                <div id="radio" class="item">
+                    <label for="career" id="radio-label" class="item11 item">What is your occupation?</label>
+                    <input type="radio" name="career" id="radio1 radios" class="item12 item" value="radio1"> Frontend Web
+                    Developer</input>
+                    <input type="radio" name="career" id="radio2 radios" class="item13 item" value="radio2"> Backend Web
+                    Developer</input>
+                    <input type="radio" name="career" id="radio3 radios" class="item14 item" value="radio3"> Fullstack Web
+                    Developer</input>
+                </div>
+
+                <div id="check" class="item">
+                    <label for="lang" id="check-label" class="item21 item">What programming language do you use?</label>
+                    <input type="checkbox" name="lang" id="check1 checks" class="item15 item" value="check1"> HTML</input>
+                    <input type="checkbox" name="lang" id="check2 checks" class="item16 item" value="check2"> CSS</input>
+                    <input type="checkbox" name="lang" id="check3 checks" class="item17 item" value="check3"> JS</input>
+                </div>
+
+                <textarea name="comments" id="textarea" class="item18 item" cols="30" rows="10"></textarea>
+
+                <button type="submit" id="submit" class="item19 item">Submit</button>
+            </form>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

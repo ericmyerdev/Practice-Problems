@@ -1,0 +1,25 @@
+body{
+    border: black 4px solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    justify-items: center;
+    align-items: start;
+}       
+
+#main{
+    border: black 4px solid;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    text-justify: center;
+}
+
+#image{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

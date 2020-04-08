@@ -1,0 +1,39 @@
+body{
+    display: grid;
+    grid-template: repeat(autofit, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.container{
+    border: black 4px solid;
+    margin: 25vh auto;
+    display: grid;
+    grid-template: repeat(autofit, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 75vw;
+    text-align: center;
+}
+
+#survey-form{
+    border: solid 4px black;
+    padding: 25px;
+    display: grid;
+    justify-self: center;
+    grid-template: repeat(autofit, 1fr);
+    gap: 10px;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.item{
+    border: black 1px solid;
+    width: 75%;
+    justify-self: center;
+}
+
+label{
+    text-align: left;
+}
