@@ -1,0 +1,31 @@
+.em{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /* border: black 1px solid; */
+}
+
+.container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+}
+
+.navbar{
+    position: fixed;
+    justify-items: center;
+    align-items: start;
+}
+
+.main{}
+
+.welcome-section{
+    height: 100vh;
+}
+
+@media (min-height: 768px){
+    .navbar{
+        height: 50vh;
+    }
+}
+
