@@ -1,0 +1,133 @@
+@font-face{
+    font-family: 'Inter';
+    src: url("https://fonts.google.com/specimen/Inter?sidebar.open&selection.family=Inter:wght@100;300;500;700");
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.root{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter';
+}
+
+.test{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    left: 12vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.quote{
+    font-size: 28px;
+    font-weight: 300;
+    color: hsl(240, 38%, 20%);
+}
+
+.sig{
+    align-self: flex-start;
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(240, 38%, 20%);
+}
+
+.sig .name{
+    color: hsl(240, 38%, 20%);
+}
+
+.sig .pos{
+    font-weight: 500;
+    color: hsl(240, 18%, 77%);
+}
+
+.imageLt{
+    z-index: 0;
+    position: absolute;
+    width: 35%;
+    height: auto;
+}
+
+.profileCont{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: auto;
+}
+
+.profile{
+    z-index: 0;
+    right: 12vw;
+    width: 80%;
+    height: auto;
+}
+
+.profileImg{
+    border-radius: 12px;
+    box-shadow: hsl(240, 38%, 20%) 10px 40px 60px -40px;
+}
+
+.imgCurve{
+    left: 0;
+    bottom: 0;
+}
+
+.imgQuote{
+    left: 18vw;
+    top: 25vh;
+    width: 8%;
+}
+
+.imgBg{
+    position: absolute;
+}
+
+
+.navBtn{
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: hsl(240, 38%, 20%) -5px 5px 60px -20px;
+}
+
+.navPrev{
+    padding-left: 16px;
+}
+
+.navNext{
+    padding-right: 16px;
+}
+
+
+@media (max-width: 375px){
+    body{
+        flex-direction: column;
+    }
+
+    .root{
+        flex-direction: column;
+    }
+}
